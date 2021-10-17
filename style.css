@@ -29,6 +29,11 @@ body {
     border: 1px solid white;
 }
 
+.text {
+    color: white; 
+    font-size: 1.5vw;
+}
+
 label {
     cursor: pointer;
 }
@@ -62,16 +67,17 @@ label {
 }
 
 #controls {
-    margin: -23% 0 0 0;
+    margin: -21% 0 0 0;
     width: 100%;
 }
 
 #active label {
-    border-radius: 10px;
-    margin-left: 1%;
+    border-radius: 20px;
+    margin-left: 3%;
     width: 15px;
     height: 15px;
-    background: #71abfe
+    background-color: #71abfe;
+    border: 10px solid #25282a;
 }
 
 #active {
@@ -83,12 +89,10 @@ label {
 
 #active label:hover {
     background: white;
-    border-color: #777 !important;
 }
 
 #switch1:checked~#active label:nth-child(1), #switch2:checked~#active label:nth-child(2), #switch3:checked~#active label:nth-child(3), #switch4:checked~#active label:nth-child(4), #switch5:checked~#active label:nth-child(5), #switch6:checked~#active label:nth-child(6) {
-    border: 2px solid #71abfe;
-    box-sizing: border-box;
+    border: 3px solid #71abfe;
     background-color: #25282a;
 }
 
@@ -104,6 +108,26 @@ label {
     transition: opacity 2s ease-in-out;
 }
 
-#slides .text {
-    color: white; 
+
+@media (max-width: 420px) {
+    #active {
+        justify-content: center;
+    }
+    #controls {
+        margin: -35% 0 0 0;
+      
+    }
+    #active label {
+        border-radius: 20px;
+        margin-left: 3%;
+        width: 15px;
+        height: 15px;
+        background-color: #71abfe;
+        border: 3px solid #25282a;
+    }
+    .text {
+        color: white; 
+        font-size: 2.5vw;
+        margin-top: 10%;
+    }
 }
